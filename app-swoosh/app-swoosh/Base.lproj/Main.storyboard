@@ -61,6 +61,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bZV-JL-Lc9" kind="show" id="LXI-fk-eeO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.31251586315154389" green="1" blue="0.23319488695745672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,16 +168,29 @@
                                     <constraint firstAttribute="height" constant="50" id="mkZ-gx-wPo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
-                                <state key="normal" title="Next">
+                                <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="px2-If-mPz">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SDq-bu-dQr"/>
+                                    <constraint firstAttribute="width" constant="50" id="cnJ-mo-Lav"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <segue destination="Pel-QV-rbo" kind="unwind" unwindAction="unwindFromSkillVCWithUnwindSegue:" id="mcN-Yd-fu6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="s5K-Hm-bWr" firstAttribute="top" secondItem="OU6-fN-i9U" secondAttribute="bottom" constant="50" id="2EO-Yt-YUW"/>
                             <constraint firstItem="8C9-4t-NXO" firstAttribute="trailing" secondItem="m2u-Hh-jIP" secondAttribute="trailing" constant="20" id="3b7-2v-6sg"/>
+                            <constraint firstItem="px2-If-mPz" firstAttribute="top" secondItem="W3P-c2-eZP" secondAttribute="top" constant="20" id="5n2-ZT-bHv"/>
                             <constraint firstItem="NyV-RZ-ktz" firstAttribute="top" secondItem="W3P-c2-eZP" secondAttribute="top" id="JuM-6W-kQP"/>
+                            <constraint firstItem="px2-If-mPz" firstAttribute="leading" secondItem="W3P-c2-eZP" secondAttribute="leading" constant="20" id="NaD-Hl-iOd"/>
                             <constraint firstItem="8C9-4t-NXO" firstAttribute="trailing" secondItem="OU6-fN-i9U" secondAttribute="trailing" id="RNb-X9-MJr"/>
                             <constraint firstItem="s5K-Hm-bWr" firstAttribute="leading" secondItem="8C9-4t-NXO" secondAttribute="leading" constant="20" id="TAN-ws-e2A"/>
                             <constraint firstItem="NyV-RZ-ktz" firstAttribute="trailing" secondItem="8C9-4t-NXO" secondAttribute="trailing" id="YNd-cK-srm"/>
@@ -190,6 +206,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sv-Yq-pPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Pel-QV-rbo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="808.79999999999995" y="118.29085457271366"/>
         </scene>
@@ -287,6 +304,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backButton" width="29" height="24"/>
         <image name="beginnerBallerBG" width="414" height="736"/>
         <image name="desiredLeagueBG" width="414" height="736"/>
         <image name="swooshLogo" width="119" height="20"/>
